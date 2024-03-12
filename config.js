@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
-const mongoUri='mongodb+srv://LMendoza:luismendoza@catando.yafsmbr.mongodb.net/Catando2024?retryWrites=true&w=majority&appName=Catando'
-
+const config=require('./confi')
+const mongoUri=config.ruta
 async function Conectar(){
     mongoose.set('strictQuery',true)
     try{
