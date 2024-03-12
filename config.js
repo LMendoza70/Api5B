@@ -1,6 +1,7 @@
 const mongoose=require('mongoose')
-const config=require('./confi')
-const mongoUri=config.ruta
+require('dotenv').config()
+
+const mongoUri= process.env.ruta 
 async function Conectar(){
     mongoose.set('strictQuery',true)
     try{
